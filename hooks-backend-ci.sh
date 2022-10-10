@@ -18,7 +18,7 @@ docker cp .prod.env scsbackend:/home/node/
 
 # run docker
 docker start scsbackend
-docker rmi $(docker images -q rollrat/scsbackend)
+docker rmi $(docker images -q rollrat/scs-backend)
 
 rm .env.docker.prod
 rm .prod.env
