@@ -10,6 +10,7 @@ aws s3api get-object --bucket scs-config --key .env.docker.prod .env.docker.prod
 docker create --env-file ./.env.docker.prod \
                   --name scsbackend \
                   --network host \
+                  --add-host host.docker.internal:host-gateway \
                   rollrat/scs-backend:latest
 
 # download env & copy to container
