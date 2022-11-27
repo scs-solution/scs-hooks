@@ -1,6 +1,7 @@
 #!/bin/bash
 # sync docker
 docker stop scsbackend && docker rm $_
+docker rmi rollrat/scs-backend:latest
 docker pull rollrat/scs-backend:latest
 
 # download env-file for docker
